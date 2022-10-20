@@ -27,12 +27,6 @@ public class MainApplication {
         int beanDefinitionCount = run.getBeanDefinitionCount();
         System.out.println(beanDefinitionCount);
 
-//        String[] beanNamesForType = run.getBeanNamesForType(CacheAspectSupport.class);
-//        System.out.println("======"+beanNamesForType.length);
-
-        //3.从容器中获取组件
-//        String[] beanNamesForType1 = run.getBeanNamesForType(WebMvcProperties.class);
-//        System.out.println("======"+beanNamesForType1.length);
 
 //        Pet tom01 = run.getBean("tom",Pet.class);
 //        Pet tom02 = run.getBean("tom",Pet.class);
@@ -53,14 +47,24 @@ public class MainApplication {
 
 
 
-        boolean tom = run.containsBean("tom");
-        System.out.println("容器中Tom组件："+tom);
+//        boolean tom = run.containsBean("tom");
+//        System.out.println("容器中Tom组件："+tom);
+//
+//        boolean user01 = run.containsBean("user01");
+//        System.out.println("容器中user01组件："+user01);
+//
+//        boolean tom22 = run.containsBean("tom22");
+//        System.out.println("容器中tom22组件："+tom22);
 
-        boolean user01 = run.containsBean("user01");
-        System.out.println("容器中user01组件："+user01);
 
-        boolean tom22 = run.containsBean("tom22");
-        System.out.println("容器中tom22组件："+tom22);
+        String[] beanNamesForType = run.getBeanNamesForType(CacheAspectSupport.class);
+        System.out.println(beanNamesForType.length);
+
+
+
+        //3.从容器中获取组件
+        String[] beanNamesForType1 = run.getBeanNamesForType(WebMvcProperties.class);
+        System.out.println("======"+beanNamesForType1.length);
 
     }
 }

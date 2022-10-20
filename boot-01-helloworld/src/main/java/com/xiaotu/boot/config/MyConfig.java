@@ -1,9 +1,11 @@
 package com.xiaotu.boot.config;
 
+import com.xiaotu.boot.bean.Car;
 import com.xiaotu.boot.bean.Pet;
 import com.xiaotu.boot.bean.User;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -27,6 +29,7 @@ import org.springframework.context.annotation.ImportResource;
 //@ConditionalOnBean(name = "tom")
 @ConditionalOnMissingBean(name="tom")
 @ImportResource("classpath:beans.xml")
+@EnableConfigurationProperties(Car.class)
 public class MyConfig {
     /**
      * Full:外部无论对配置类中的这个组件注册方法调用多少次获取的都是之前注册容器中的单实例对象
