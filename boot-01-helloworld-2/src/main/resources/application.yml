@@ -1,0 +1,27 @@
+person:
+  #userName: "Theodore"
+  boss: true
+  birth: 2022/10/21 10:14:13
+  age: 17
+  pet: {name: "xixi",weight: 23.3}
+  interests: [唱跳,rap,篮球]
+  animals:
+    - xixi
+    - haha
+  score:
+    math:
+      first: 100
+      second: 120
+      third: 150
+    english: [123,231,412]
+    chinese: {first: 120,second: 110}
+  salarys: [312,1241]
+  allPets:
+    - sick:
+        - {name: "The",weight: 23.3}
+        - {name: "asd",weight: 24.3}
+    - healthy:
+        - {name: "The2",weight: 28.3}
+        - {name: "asd2",weight: 28.3}
+  user-name: 1231
+debug: true
