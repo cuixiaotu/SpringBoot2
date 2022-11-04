@@ -5,6 +5,7 @@ import lombok.ToString;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -15,7 +16,7 @@ import java.util.Set;
 @Component
 @ToString
 @Data
-public class Person {
+public class Person implements Serializable {
     private String userName;
     private Boolean boss;
     private Date birth;
